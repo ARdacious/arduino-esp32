@@ -80,6 +80,9 @@ set(ARDUINO_ALL_LIBRARIES
   AsyncUDP
   BLE
   BluetoothSerial
+  CST816S
+  DalasTemperature
+  dhtESP32-rmt
   DNSServer
   EEPROM
   ESP_I2S
@@ -91,6 +94,7 @@ set(ARDUINO_ALL_LIBRARIES
   FS
   HTTPClient
   HTTPUpdate
+  HTTPUpdateServer
   Insights
   LittleFS
   NetBIOS
@@ -124,6 +128,12 @@ set(ARDUINO_LIBRARY_BluetoothSerial_SRCS
   libraries/BluetoothSerial/src/BTAddress.cpp
   libraries/BluetoothSerial/src/BTAdvertisedDeviceSet.cpp
   libraries/BluetoothSerial/src/BTScanResultsSet.cpp)
+
+set(ARDUINO_LIBRARY_CST816S_SRCS libraries/CST816S/src/CST816S.cpp)
+
+set(ARDUINO_LIBRARY_DallasTemperature_SRCS libraries/DallasTemperature/src/DallasTemperature.cpp)
+
+set(ARDUINO_LIBRARY_dhtESP32-rmt_SRCS libraries/dhtESP32-rmt/src/dhtESP32-rmt.cpp)
 
 set(ARDUINO_LIBRARY_DNSServer_SRCS libraries/DNSServer/src/DNSServer.cpp)
 
