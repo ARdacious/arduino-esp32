@@ -81,7 +81,7 @@ set(ARDUINO_ALL_LIBRARIES
   BLE
   BluetoothSerial
   CST816S
-  DalasTemperature
+  DallasTemperature
   dhtESP32-rmt
   DNSServer
   EEPROM
@@ -99,6 +99,7 @@ set(ARDUINO_ALL_LIBRARIES
   LittleFS
   NetBIOS
   Network
+  OneWire
   OpenThread
   PPP
   Preferences
@@ -168,6 +169,9 @@ set(ARDUINO_LIBRARY_Insights_SRCS libraries/Insights/src/Insights.cpp)
 set(ARDUINO_LIBRARY_LittleFS_SRCS libraries/LittleFS/src/LittleFS.cpp)
 
 set(ARDUINO_LIBRARY_NetBIOS_SRCS libraries/NetBIOS/src/NetBIOS.cpp)
+
+set(ARDUINO_LIBRARY_OneWire_SRCS libraries/OneWire/src/OneWire.cpp)
+set(ARDUINO_LIBRARY_OneWire_INCL libraries/OneWire)
 
 set(ARDUINO_LIBRARY_OpenThread_SRCS
   libraries/OpenThread/src/OThreadCLI.cpp
@@ -296,6 +300,10 @@ foreach(libname IN LISTS ARDUINO_ALL_LIBRARIES)
     endif()
     if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/libraries/${libname}/src)
       list(APPEND ARDUINO_LIBRARIES_INCLUDEDIRS libraries/${libname}/src)
+    endif()
+    message( "hanlding ${libname}")
+    if(ARDUINO_LIBRARY_${libname}_INCL)
+      list(APPEND ARDUINO_LIBRARIES_INCLUDEDIRS ${ARDUINO_LIBRARY_${libname}_INCL})
     endif()
   endif()
 endforeach()
