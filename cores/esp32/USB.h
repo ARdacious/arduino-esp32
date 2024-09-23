@@ -19,6 +19,8 @@
 #include "sdkconfig.h"
 #if CONFIG_TINYUSB_ENABLED
 
+#include <Arduino.h>
+
 #include "esp_event.h"
 #include "USBCDC.h"
 

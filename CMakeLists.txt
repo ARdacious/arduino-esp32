@@ -218,6 +218,7 @@ set(ARDUINO_LIBRARY_USB_SRCS
   libraries/USB/src/USBHIDSystemControl.cpp
   libraries/USB/src/USBHIDVendor.cpp
   libraries/USB/src/USBVendor.cpp)
+set(ARDUINO_LIBRARY_USB_REQUIRES espressif__tinyusb)
 
 set(ARDUINO_LIBRARY_WebServer_SRCS
   libraries/WebServer/src/WebServer.cpp
