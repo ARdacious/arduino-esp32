@@ -76,6 +76,7 @@ set(CORE_SRCS
   )
 
 set(ARDUINO_ALL_LIBRARIES
+  AdafruitNeoPixel
   ArduinoOTA
   AsyncUDP
   BLE
@@ -118,6 +119,10 @@ set(ARDUINO_ALL_LIBRARIES
   WiFiProv
   Wire
   )
+
+set(ARDUINO_LIBRARY_AdafruitNeoPixel_SRCS libraries/Adafruit_NeoPixel/Adafruit_NeoPixel.cpp
+                                          libraries/Adafruit_NeoPixel/esp.c)
+set(ARDUINO_LIBRARY_AdafruitNeoPixel_INCL libraries/Adafruit_NeoPixel)
 
 set(ARDUINO_LIBRARY_ArduinoOTA_SRCS libraries/ArduinoOTA/src/ArduinoOTA.cpp)
 set(ARDUINO_LIBRARY_ArduinoOTA_REQUIRES esp_https_ota)
