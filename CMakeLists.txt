@@ -76,6 +76,7 @@ set(CORE_SRCS
   )
 
 set(ARDUINO_ALL_LIBRARIES
+  AdafruitBusIO
   AdafruitNeoPixel
   AdafruitMLX90614
   ArduinoOTA
@@ -120,6 +121,12 @@ set(ARDUINO_ALL_LIBRARIES
   WiFiProv
   Wire
   )
+
+set(ARDUINO_LIBRARY_AdafruitBusIO_SRCS libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp
+                                       libraries/Adafruit_BusIO/Adafruit_GenericDevice.cpp
+                                       libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp
+                                       libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp)
+set(ARDUINO_LIBRARY_AdafruitBusIO_INCL libraries/Adafruit_BusIO)
 
 set(ARDUINO_LIBRARY_AdafruitNeoPixel_SRCS libraries/Adafruit_NeoPixel/Adafruit_NeoPixel.cpp
                                           libraries/Adafruit_NeoPixel/esp.c)
