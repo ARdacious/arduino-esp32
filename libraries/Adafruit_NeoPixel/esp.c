@@ -33,10 +33,11 @@
 
 
 #ifdef HAS_ESP_IDF_5
-
+// TODO: removed led_data from stack, how to configure num bytes
   rmt_data_t led_data[33 * 3 * 3 * 8];
 
 void espShow(uint8_t pin, uint8_t *pixels, uint32_t numBytes, boolean is800KHz) {
+  // TODO: moved from stack, see above
   //rmt_data_t led_data[numBytes * 8];
 
   if (!rmtInit(pin, RMT_TX_MODE, RMT_MEM_NUM_BLOCKS_1, 10000000)) {
