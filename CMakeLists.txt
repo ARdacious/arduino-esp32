@@ -77,6 +77,7 @@ set(CORE_SRCS
 
 set(ARDUINO_ALL_LIBRARIES
   AdafruitNeoPixel
+  AdafruitMLX90614
   ArduinoOTA
   AsyncUDP
   BLE
@@ -123,6 +124,9 @@ set(ARDUINO_ALL_LIBRARIES
 set(ARDUINO_LIBRARY_AdafruitNeoPixel_SRCS libraries/Adafruit_NeoPixel/Adafruit_NeoPixel.cpp
                                           libraries/Adafruit_NeoPixel/esp.c)
 set(ARDUINO_LIBRARY_AdafruitNeoPixel_INCL libraries/Adafruit_NeoPixel)
+
+set(ARDUINO_LIBRARY_AdafruitMLX90614_SRCS libraries/Adafruit_MLX90614/Adafruit_MLX90614.cpp)
+set(ARDUINO_LIBRARY_AdafruitMLX90614_INCL libraries/Adafruit_MLX90614)
 
 set(ARDUINO_LIBRARY_ArduinoOTA_SRCS libraries/ArduinoOTA/src/ArduinoOTA.cpp)
 set(ARDUINO_LIBRARY_ArduinoOTA_REQUIRES esp_https_ota)
